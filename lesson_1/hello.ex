@@ -1,4 +1,4 @@
-defmodule Run do
+defmodule HelloWorld do
   def main(text) do
     text
     |> IO.inspect   # => output "Hello World"
@@ -16,9 +16,9 @@ defmodule Run do
   end
 end
 
-"Hello World" |> Run.main()
-# "Hello World" |> Run.main() == Run.main("Hello World")
+"Hello World" |> HelloWorld.main()
+# "Hello World" |> HelloWorld.main() == HelloWorld.main("Hello World")
 
 
 # if function has more than one argument
-"Hello World" |> Run.main2("Kipoha")
+"Hello World" |> HelloWorld.main2("Kipoha")
