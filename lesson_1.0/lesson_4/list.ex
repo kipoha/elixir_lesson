@@ -34,7 +34,7 @@ Enum.max(list_data) |> IO.inspect
 
 range = 1..5
 Enum.map(range, fn x -> x * 2 end) |> IO.inspect  # output => [2, 4, 6, 8, 10]
-Enum.filter(range, fn x -> x < 5 end) |> IO.inspect # output => [1, 2, 3, 4]
+Enum.filter(range, &(&1 > 2)) |> IO.inspect # output => [1, 2, 3, 4]
 Enum.to_list(range) |> IO.inspect # output => [1, 2, 3, 4, 5]
 
 Enum.reduce(range, fn x, acc -> x + acc end) |> IO.inspect  # output => 15
